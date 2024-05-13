@@ -24,7 +24,7 @@ public class ToDo {
     private String taskName;
 
     @NonNull
-    private String desc;
+    private String description;
 
     @CreatedDate
     Timestamp dateCreated;

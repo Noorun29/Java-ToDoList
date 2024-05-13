@@ -9,7 +9,7 @@ import com.example.ToDoList.service.ToDoServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/todo")
+@RequestMapping("api/v1/todo/")
 public class ToDoController {
 
     @Autowired
@@ -17,7 +17,7 @@ public class ToDoController {
 
     @GetMapping
     public List<ToDo> findAll(){
-        return toDoService.getAllTodo();
+        return toDoService.getAllToDo();
     }
 
     @PostMapping

@@ -16,22 +16,14 @@ public class ToDoServiceImpl implements  ToDoService {
     private ToDoRepo toDoRepo;
 
 
-    public List <ToDo> getAllTodo () {
-        return toDoRepo.findAll();
-    }
-
-
-    public void  saveTodo(ToDo todo){
-        this.toDoRepo.save(todo);
-    }
-
     @Override
     public List<ToDo> getAllToDo() {
-        return List.of();
+        return toDoRepo.findAll();
     }
 
     @Override
     public void saveToDo(ToDo todo) {
+        this.toDoRepo.save(todo);
 
     }
 
@@ -39,7 +31,7 @@ public class ToDoServiceImpl implements  ToDoService {
     public void updateToDo(Long id, ToDo todo) {
         ToDo todoFromDb = toDoRepo.findById(id).get();
         todoFromDb.setTaskName(todo.getTaskName());
-        todoFromDb.setDesc(todo.getDesc());
+        todoFromDb.setDescription(todo.getDescription());
         toDoRepo.save(todoFromDb);
     }
 

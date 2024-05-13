@@ -5,7 +5,6 @@ import com.example.ToDoList.entity.ToDo;
 import java.util.List;
 
 public interface ToDoService {
-
     List <ToDo> getAllToDo();
 
     void saveToDo(ToDo todo);
